@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, serif;
+
+
+}
+
+#wrapper {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 5%;
+    overflow: visible;
+}
+
+div.module {
+    border: solid thick slategrey;
+    padding: 1ex;
+    background-color: antiquewhite;
+    margin-top: 0.5ex;
+    margin-bottom: 0.5ex;
+}
+
+#studentName {
+    color: red;
+    font-weight: bold;
+}
+
+#studentDetails {
+    font-size: larger;
+    font-family: "Lucida Sans", serif;
+    padding-top: 1ex;
+    padding-bottom: 1ex;
+}
+
+#accordion .accordionSection {
+    border: solid thick orangered;
+    padding: 2ex;
+    background-color: beige;
+
+
+}
+
+#accordion .ui-accordion-header {
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 3px;
+}
+
+#accordion .ui-accordion-content {
+
+}
