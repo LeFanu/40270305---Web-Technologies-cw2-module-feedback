@@ -21,6 +21,13 @@ div.module {
     margin-bottom: 0.5ex;
 }
 
+#accordion .accordionSection  .questionTitle {
+    font-weight: bold;
+    font-style: oblique;
+    color: lightseagreen;
+    text-align: center;
+}
+
 #studentName {
     color: red;
     font-weight: bold;
