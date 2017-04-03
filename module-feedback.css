@@ -57,3 +57,36 @@ div.module {
 #accordion .ui-accordion-content {
 
 }
+
+
+img.rating {
+    width: 40px;
+    height: 40px;
+
+}
+
+label > input[type="radio"]{
+    display:none;
+}
+
+label > input[type="radio"] + img
+{
+
+    height: 40px;
+    width: 40px;
+    display:inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+label > input[type="radio"]:checked + img
+{
+
+    height: 45px;
+    width: 45px;
+    display:inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+

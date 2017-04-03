@@ -9,7 +9,7 @@
 <?php
     //links to the css, javascript, etc
     print "<link rel=stylesheet href=module-feedback.css>";
-    print "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>";
+    print "<script src=jquery.min.js></script>";
     print "<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css'>";
     print "<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>";
 
@@ -54,6 +54,7 @@ print "<div id='wrapper'>";
 
         //html form for questions
         print "<form METHOD='post' action='storeFeedback.php'>";
+//print "<form METHOD='post' action='output.php'>";
         //accordion starts here
             print "<div id='accordion'>";
 
@@ -95,27 +96,51 @@ print "<div id='wrapper'>";
                                         }
                                     }
 
+
+
                                 //printing question
+                                //changing the name of the div's id to avoid errors later
+
+                                $divname = preg_replace('/\./','d',$fetchedQuestion);
+                                print "<div id='$rowSelectModule[0]$divname'>";
                                 print "<p class='questionTitle'>Question ".$rowQuestions[0].":</p>";
                                 print "<p>".$rowQuestions[1]."</p>";
 
+                                //checking all the previous answers to find a match
                                     foreach ($radioButtonsValues as $key => $value) {
-                                        //asking user for the feedback
                                         if ($key == $buttonToCheck)
                                         {
+                                            //if there is a much we want to add some bits to the radio buttons
                                             $check='checked="checked"';
+                                            $imgSrc="src=\"emoticons\/$key.png\"";
+                                            $checked="checked";
                                         }
                                         else
                                         {
                                             $check="";
+                                            $imgSrc='src="emoticons/0.png"';
+                                            $checked="";
                                         }
-                                        print "<input type=\"radio\" name=\"$rowSelectModule[0]$fetchedQuestion\" value=\"$key\" $check/>$value";
+
+                                        //wrapping radio button an an image into the label so we can display that as a smiley face
+                                        print "<label for=\"$rowSelectModule[0]$fetchedQuestion$value\">";
+                                        print "<input type=\"radio\"
+                                            name=\"$rowSelectModule[0]$fetchedQuestion\"
+                                            value=\"$key\"
+                                            $check
+                                            class=\"rating\" id=\"$rowSelectModule[0]$fetchedQuestion$value\" />";
+                                            print "<img $imgSrc class=\"rating icon$key $checked\" name=\"$key\" />";
+
+                                        print "</label>";
                                     }
+                                //closing each question's div
+                                print '</div>';
                                 }
+
                         print '</div>';
                 }
 
-            //closing accordion section
+            //closing accordion div
             print '</div>';
             print "<input type=hidden name=u value=$_REQUEST[u]>";
             print "<input type=submit>";

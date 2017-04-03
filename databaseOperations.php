@@ -26,8 +26,8 @@ $cursorSelectStudent = $statementSelectStudent->get_result();
 //===========================================================================================
 //select statement for existing results previously entered
 $previousAnswersSelectQuery = "
-    SELECT MOD_CODE, QUE_CODE, RES_VALU 
-    FROM INS_RES 
+    SELECT MOD_CODE, QUE_CODE, RES_VALU
+    FROM INS_RES
     WHERE SPR_CODE=? AND AYR_CODE='2016/7' AND PSL_CODE='TR1';
 ";
 
