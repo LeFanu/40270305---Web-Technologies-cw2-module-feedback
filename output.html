@@ -3,20 +3,44 @@
         <title>Student Survey Output</title>
         <meta name="author" content="Karol Pasierb">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya|Archivo+Black|Crete+Round|Oxygen|Playfair+Display+SC|Righteous" rel="stylesheet">
 
+        <link rel=stylesheet href=module-feedback.css>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
-        <script src=jquery.min.js></script>
+        <script src="jquery.min.js"></script>
         <script src="resultsChart.js"></script>
     </head>
     <body>
-    <label for="MOD_CODE"></label><input id="MOD_CODE" value="CSN08101"><button id="go">See Results</button>
 
-    
+        <div id="wrapper">
 
-   <div width="600px" height="600px">
-       <canvas id="myChart" width="600px" height="600px"></canvas>
-   </div>
+            <div class="outputControls">
+                <h1>Module Results Charts</h1>
+                <p>Please enter the module numbers you want to compare in the boxes below.</p>
+                <label for="MOD_CODE">
+                    <input id="MOD_CODE" value="CSN08101"/>
+                    <button id="go">See Results</button>
+                </label>
 
+                <br>
+                <label for="MOD_CODE_Compare">
+                    <input id="MOD_CODE_Compare" value="IMD08101"/>
+                    <button id="goCompare">Compare Results</button>
+                </label>
+            </div>
+
+
+
+               <div class="canvases"  id="charts">
+
+                    <div class="canvases">
+                        <canvas class="canvases" id="myChart"></canvas>
+                    </div>
+                    <div class="canvases">
+                        <canvas class="canvases" id="myChartCompare"></canvas>
+                    </div>
+               </div>
+        </div>
 
     </body>
 </html>

@@ -4,7 +4,7 @@
 
     <meta name="author" content="Karol Pasierb">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Archivo+Black|Crete+Round|Oxygen|Playfair+Display+SC|Righteous" rel="stylesheet">
 
 <?php
     //links to the css, javascript, etc
@@ -25,11 +25,17 @@
 print "<div id='wrapper'>";
 
     //top of the page
-    print "<h1>Dominion University Module Feedback</h1>";
+    print "<h1>Dominion University <br> Module Feedback</h1>";
         //checking if user existis by getting mattriculation number
         if(!array_key_exists( 'u', $_REQUEST)){
-            print "Who are you?<form><input name='u' value='50200036'><input type=submit></form>";
-            //if user enters wrong mattriculation number we don't want to continue
+            print "<div class=\"outputControls\">";
+            print "<p>Please enter your matriculation number below.</p>";
+                print "<form>
+                        <input name='u' value='50200036'>
+                        <input type=submit>
+                      </form>";
+            print "</div>";
+            //if user enters wrong matricculation number we don't want to continue
             exit();
         }
 
@@ -48,7 +54,28 @@ print "<div id='wrapper'>";
 
         //printing the details obtained
         print "<div id='studentDetails'>";
-            print "Welcome student: <span id='studentName'>".$rowSelectStudent[0]." ".$rowSelectStudent[1]."</span>";
+            print "<h2> <span id='studentName'>Welcome ".$rowSelectStudent[0]." ".$rowSelectStudent[1]."</span></h2>";
+            print "<p >Dear Student <br>
+                        Please take few minutes to help us by telling us about your experience of the modules you study. 
+                        Your feedback will help us to improve the quality of our teaching, learning and assessment.
+                        <br>
+                        Please answer all questions that apply by clicking on the icon which represents your level of satisfaction or dissatisfaction.
+                        All responses are treated anonymously.
+                        </p>";
+            print "<p class='description'>Key:<span class='key'>
+                      
+                        <span>Definitely Disagree: 
+                            <img class='keyImg' src='emoticons/1.png'></span>
+                        <span>Mostly Disagree:  
+                            <img class='keyImg' src='emoticons/2.png'></span>
+                        <span>Neither Agree Nor Disagree: 
+                            <img class='keyImg' src='emoticons/3.png'></span>
+                        <span>Mostly Agree: 
+                            <img class='keyImg' src='emoticons/4.png'></span>
+                        <span>Definitely Agree: 
+                            <img class='keyImg' src='emoticons/5.png'></span><br>
+                   </span>      
+                       When you click on wanted option it will be highlighted.  </p>  ";
         print "</div>";
 
 
@@ -142,9 +169,11 @@ print "<div id='wrapper'>";
 
             //closing accordion div
             print '</div>';
-            print "<input type=hidden name=u value=$_REQUEST[u]>";
-            print "<input type=submit>";
-        print "</form>";
+                print "<div class='outputControls'>";
+                    print "<input type=hidden name=u value=$_REQUEST[u]><br>";
+                    print "<input type=submit>";
+                print '</div>';
+            print "</form>";
 
 
         //closing all of our statements for the DB and DB connection
