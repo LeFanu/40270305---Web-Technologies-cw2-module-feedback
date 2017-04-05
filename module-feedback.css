@@ -1,181 +1,416 @@
-body {
-    font-family: 'Oxygen', sans-serif;
-    background-color: #330000;
-    letter-spacing: 2px;
-    color: floralwhite;
+/*FOR MOBILE*/
+@media only screen and (max-width: 768px) {
+
+    body {
+        font-family: 'Oxygen', sans-serif;
+        background-color: #330000;
+        letter-spacing: 2px;
+        color: floralwhite;
+    }
+
+    #wrapper {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
+        overflow: visible;
+        background-color: #660000;
+        border: outset 5px #ffbf00;
+        border-radius: 100px;
+    }
+
+    h1 {
+        font-size: 200%;
+        font-family: 'Righteous', cursive;
+        letter-spacing: 2px;
+        text-shadow: -2px 0 #1a0000, 0 4px #1a0000, 4px 0 #1a0000, 0 -2px #1a0000;
+        text-align: center;
+    }
+
+    h2, .key{
+        font-family: 'Alegreya', serif;
+        letter-spacing: 3px;
+    }
+
+    .ui-state-default{
+
+        background-image: none;
+    }
+
+    #accordion h3 {
+        font-weight: lighter;
+        text-align: center;
+        color: #1a0000;
+        border: outset 5px #e67300;
+        border-radius: 50px;
+        font-family: 'Crete Round', serif;
+        font-size: 100%;
+        letter-spacing: 5px;
+        background:none;
+        background-color: #ffc61a;
+    }
+
+    #accordion .accordionSection  .questionTitle {
+        font-family: 'Playfair Display SC', serif;
+        font-weight: bold;
+        font-style: oblique;
+        color: #b30000;
+    }
+
+    #accordion .accordionSection {
+        border: solid 5px #ff9933;
+        border-radius: 50px;
+        padding: 2ex;
+        background-color: #ffe699;
+        font-family: 'Oxygen', sans-serif;
+    }
+
+    #studentName, .key, h3 {
+        color: #ff8000;
+        font-weight: bold;
+        text-shadow: -1px 0 #1a0000, 0 1px #1a0000, 1px 0 #1a0000, 0 -1px #1a0000;
+    }
+
+    #studentDetails {
+        font-size: larger;
+        padding-top: 1ex;
+        padding-bottom: 1ex;
+    }
+
+    label > input[type="radio"]{
+        display:none;
+    }
+
+    label > input[type="radio"] + img
+    {
+        height: 35px;
+        width: 35px;
+        display:inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    label > input[type="radio"]:checked + img
+    {
+        height: 45px;
+        width: 45px;
+        display:inline;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    canvas {
+        width: 300px ;
+        height: 300px ;
+        display: inline-block ;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0;
+        border-radius: 50px;
+        background-color: white;
+    }
+
+    .canvases {
+        display: inline-block ;
+    }
+
+    .outputControls {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .outputControls input {
+        padding: 5px;
+        background-color: #ffe699;
+        color: #330000;
+        font-weight: bold;
+         font-size: 120%;
+    }
+
+    .outputControls button, .outputControls input[type="submit"] {
+        padding: 5px;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        width: 60%;
+        color: #330000;
+        background-color: #ffe699;
+        font-size: 120%;
+        border-radius: 50px;
+        box-shadow: 0 4px 16px 0 #ffbf00, 0 3px 20px 0 #ffbf00;
+    }
+
+    .keyImg {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+    }
+
+    .key span {
+        display: block;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .description {
+        margin-left: 10%;
+        margin-bottom: 5%;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 80%;
+    }
+
+    summary::-webkit-details-marker {
+        font-size: 150%;
+        color: red;
+    }
+
+    .introduction, summary {
+        font-size: 90%;
+    }
+
+    a:link {
+        color: #ff9933;
+    }
+
+    a:visited {
+        color: #1a0000;
+
+    }
+    a:hover {
+        color: #b30000;
+
+    }
+
+    #tutorSection {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 50px;
+        border: solid 5px #ff9933;
+        border-radius: 50px;
+        background-color: #ffe699;
+        font-family: 'Oxygen', sans-serif;
+        color: darkred;
+    }
+
+    fieldset {
+        border: 1px solid #ffe699;
+
+    }
+
+
+
+
+    /*END*/
 }
 
-#wrapper {
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    padding: 5%;
-    overflow: visible;
-    background-color: #660000;
-    border: outset 5px #ffbf00;
-    border-radius: 50px;
+
+    /*FOR DESKTOP*/
+@media only screen and (min-width: 768px) {
+
+    body {
+        font-family: 'Oxygen', sans-serif;
+        background-color: #330000;
+        letter-spacing: 2px;
+        color: floralwhite;
+    }
+
+    #wrapper {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
+        overflow: visible;
+        background-color: #660000;
+        border: outset 5px #ffbf00;
+        border-radius: 100px;
+    }
+
+    h1 {
+        font-size: 300%;
+        font-family: 'Righteous', cursive;
+        letter-spacing: 2px;
+        text-shadow: -2px 0 #1a0000, 0 4px #1a0000, 4px 0 #1a0000, 0 -2px #1a0000;
+        text-align: center;
+    }
+
+    h2, .key {
+        font-family: 'Alegreya', serif;
+        letter-spacing: 3px;
+    }
+
+    .ui-state-default{
+
+        background-image: none;
+    }
+
+    #accordion h3 {
+   /*     font-weight: bold;*/
+        text-align: center;
+        color: #1a0000;
+        border: outset 5px #e67300;
+        border-radius: 50px;
+        font-family: 'Crete Round', serif;
+        font-size: 150%;
+        letter-spacing: 5px;
+        background:none;
+        background-color: #ffc61a;
+    }
+
+    #accordion .accordionSection  .questionTitle {
+        font-family: 'Playfair Display SC', serif;
+        font-weight: bold;
+        font-style: oblique;
+        color: #b30000;
+    }
+
+    #accordion .accordionSection {
+        border: solid 5px #ff9933;
+        border-radius: 50px;
+        padding: 2ex;
+        background-color: #ffe699;
+        font-family: 'Oxygen', sans-serif;
+    }
+
+    #studentName, .key, h3 {
+        color: #ff8000;
+        font-weight: bold;
+        text-shadow: -1px 0 #1a0000, 0 1px #1a0000, 1px 0 #1a0000, 0 -1px #1a0000;
+    }
+
+    #studentDetails {
+        font-size: larger;
+        padding-top: 1ex;
+        padding-bottom: 1ex;
+    }
+
+    label > input[type="radio"]{
+        display:none;
+    }
+
+    label > input[type="radio"] + img
+    {
+        height: 40px;
+        width: 40px;
+        display:inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    label > input[type="radio"]:checked + img
+    {
+        height: 50px;
+        width: 50px;
+        display:inline;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    canvas {
+        width: 300px ;
+        height: 300px ;
+        display: inline-block ;
+        margin: 20px;
+        padding: 0;
+        border-radius: 50px;
+        /*background-color: rgba(255,230, 153, 1)*/
+        background-color: white;
+
+    }
+
+    .canvases {
+        padding: 20px;
+        display: inline-block ;
+    }
+
+    .outputControls {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .outputControls input {
+        padding: 5px;
+        margin: 10px;
+        background-color: #ffe699;
+        color: #330000;
+        font-weight: bold;
+        font-size: 120%;
+    }
+
+    .outputControls button, .outputControls input[type="submit"] {
+        padding: 5px;
+        margin: 10px;
+        font-weight: bold;
+        width: 20%;
+        color: #330000;
+        background-color: #ffe699;
+        font-size: 120%;
+        border-radius: 50px;
+        box-shadow: 0 4px 16px 0 #ffbf00, 0 3px 20px 0 #ffbf00;
+    }
+
+    .keyImg {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+    }
+
+    .key span {
+        display: block;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .description {
+        margin-left: 10%;
+        margin-bottom: 5%;
+        letter-spacing: 2px;
+    }
+
+    summary::-webkit-details-marker {
+        font-size: 150%;
+        color: red;
+    }
+
+    a:link {
+        color: #ff9933;
+    }
+
+    a:visited {
+        color: #1a0000;
+        font-weight: bold;
+
+    }
+    a:hover {
+        color: #b30000;
+
+    }
+
+    #tutorSection {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 50px;
+        border: solid 5px #ff9933;
+        border-radius: 50px;
+        background-color: #ffe699;
+        font-family: 'Oxygen', sans-serif;
+        color: darkred;
+    }
+
+    fieldset {
+        border: 1px solid #ffe699;
+
+    }
+
+
+
+    /*END*/
 }
 
-h1 {
-    font-size: 350%;
-    font-family: 'Righteous', cursive;
-    letter-spacing: 2px;
-    text-shadow: -2px 0 #1a0000, 0 4px #1a0000, 4px 0 #1a0000, 0 -2px #1a0000;
-    text-align: center;
-}
-
-h2, .key{
-    font-family: 'Alegreya', serif;
-    letter-spacing: 3px;
-}
-
-div.module {
-    border: solid thick slategrey;
-    padding: 1ex;
-    background-color: antiquewhite;
-    margin-top: 0.5ex;
-    margin-bottom: 0.5ex;
-}
-
-.ui-state-default{
-    background-color: #3173a5;
-    background-image: none;
-}
-
-#accordion h3 {
-    font-weight: bold;
-    text-align: center;
-    color: #1a0000;
-    border: outset 5px #e67300;
-    border-radius: 50px;
-    font-family: 'Crete Round', serif;
-    font-size: 150%;
-    letter-spacing: 5px;
-    background:none;
-    background-color: #ffc61a;
-}
-
-
-#accordion .accordionSection  .questionTitle {
-    font-family: 'Playfair Display SC', serif;
-    font-weight: bold;
-    font-style: oblique;
-    color: #b30000;
-    font-size: 120%;
-}
-
-#accordion .accordionSection {
-    border: solid 5px #ff9933;
-    border-radius: 50px;
-    padding: 2ex;
-    background-color: #ffe699;
-    font-family: 'Oxygen', sans-serif;
-
-}
-
-
-
-
-#studentName, .key {
-    color: #ff8000;
-    font-weight: bold;
-    font-size: 120%;
-    text-shadow: -1px 0 #1a0000, 0 1px #1a0000, 1px 0 #1a0000, 0 -1px #1a0000;
-}
-
-#studentDetails {
-    font-size: larger;
-    padding-top: 1ex;
-    padding-bottom: 1ex;
-}
-
-
-img.rating {
-    width: 40px;
-    height: 40px;
-}
-
-label > input[type="radio"]{
-    display:none;
-}
-
-label > input[type="radio"] + img
-{
-
-    height: 40px;
-    width: 40px;
-    display:inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-label > input[type="radio"]:checked + img
-{
-
-    height: 45px;
-    width: 45px;
-    display:inline;
-    margin-left: 5px;
-    margin-right: 5px;
-
-}
-
-canvas {
-    width: 300px ;
-    height: 300px ;
-    display: inline-block ;
-    margin: 20px;
-    padding: 0;
-
-}
-
-.canvases {
-    padding: 20px;
-    display: inline-block ;
-}
-
-.outputControls {
-
-    margin-top: 50px;
-}
-
-.outputControls input {
-    padding: 5px;
-    margin: 10px;
-    background-color: #ffe699;
-    color: #330000;
-    font-weight: bold;
-    font-size: 120%;
-}
-
-.outputControls button, .outputControls input[type="submit"] {
-    padding: 5px;
-    margin: 10px;
-    font-weight: bold;
-    width: 200px;
-    color: #330000;
-    background-color: #ffe699;
-    font-size: 120%;
-    border-radius: 50px;
-    box-shadow: 0 4px 16px 0 #ffbf00, 0 3px 20px 0 #ffbf00;
-}
-
-.keyImg {
-    width: 40px;
-    height: 40px;
-
-    vertical-align: middle;
-}
-
-.key span {
-    display: block;
-    margin-top: 10px;
-    padding: 0;
-}
-
-.description {
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
+/*END OF FILE*/
