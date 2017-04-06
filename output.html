@@ -19,14 +19,19 @@
                 <h1>Module Results Charts</h1>
                 <p>Please enter the module numbers you want to compare in the boxes below.</p>
                 <label for="MOD_CODE">
-                    <input id="MOD_CODE" value="CSN08101"/>
+                    <select id="MOD_CODE"></select>
                     <button id="go">See Results</button>
                 </label>
 
                 <br>
                 <label for="MOD_CODE_Compare">
-                    <input id="MOD_CODE_Compare" value="IMD08101"/>
+                    <select id="MOD_CODE_Compare"></select>
                     <button id="goCompare">Compare Results</button>
+                </label>
+                <br>
+                <label for="MOD_CODE_Compare2">
+                    <select id="MOD_CODE_Compare2"></select>
+                    <button id="goCompare2">Compare Results</button>
                 </label>
             </div>
 
@@ -39,6 +44,9 @@
                     <div class="canvases">
                         <canvas class="canvases" id="myChartCompare"></canvas>
                     </div>
+                   <div class="canvases">
+                       <canvas class="canvases" id="myChartCompare2"></canvas>
+                   </div>
                </div>
         </div>
 

@@ -10,46 +10,14 @@ $(function(){
 
         //getting the name for selecting parent div and then its image children
         var labelName = $(this).parent().attr("for").substr(0,12);
-        labelName = labelName.replace(".","d") + " label img";
-
-//FOR DEBUGGING
-        console.log(labelName);
-        console.log("emoticons/"+iconNumber+iconNumber+".png");
+        labelName = labelName.replace(".","d");
 
         //removing class for checked pics to revert them to original state
-        var questionDiv = $('#'+labelName);
-        questionDiv.removeClass("checked");
-
-
-          $('#'+labelName+" > label > img").each().attr("src","emoticons/"+iconNumber+iconNumber+".png");
-
-
-        // console.log("questionDiv is " + questionDiv);
-        // var divsChildren = [];
-        // questionDiv.children().each(function(){
-        //   divsChildren.push(this);
-        //   console.log("this is " + this);
-        // })
-        // console.log("divsChildren are " + divsChildren);
-        // questionDiv.children('label').each(alert("chuj!"));
-        // questionDiv.children('label').each(function(i){
-        //   console.log("this is " + this);
-        //     var imgToChange = $(this).children('img');
-        //     console.log("imgToChange is " + imgToChange);
-        //   console.log("emoticons/"+(i+1)+(i+1)+".png");
-        //   imgToChange.attr("src","emoticons/"+(i+1)+(i+1)+".png");
-        // });
-
-        console.log("passed the loop");
-        //
-        // for(i=0; i < 5; i++){
-        //       console.log(questionDiv[i]);
-        //
-        //       var divTochange = questionDiv[i];
-        //       console.log(divTochange);
-        // //  divTochange.attr("src","emoticons/"+i+i+".png");
-        // }
-
+        var iconsToChange =   $('#'+labelName).find('img');
+        for(i=0; i < 5; i++){
+          $(iconsToChange[i]).removeClass("checked");
+            $(iconsToChange[i]).attr("src","emoticons/"+(i+1)+(i+1)+".png");
+        }
 
         //changing the picture of the clicked element
         switch (iconNumber) {

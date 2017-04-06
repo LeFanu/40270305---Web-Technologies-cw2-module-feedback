@@ -57,12 +57,14 @@
         font-weight: bold;
         font-style: oblique;
         color: #b30000;
+        margin: 0;
     }
 
     #accordion .accordionSection {
         border: solid 5px #ff9933;
         border-radius: 50px;
-        padding: 2ex;
+        padding-top: 1ex;
+        padding-left: 1ex;
         background-color: #ffe699;
         font-family: 'Oxygen', sans-serif;
     }
@@ -90,6 +92,7 @@
         display:inline-block;
         margin-left: 5px;
         margin-right: 5px;
+        margin-bottom: 1ex;
     }
 
     label > input[type="radio"]:checked + img
@@ -199,10 +202,16 @@
 
     fieldset {
         border: 1px solid #ffe699;
-
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-top: 2ex;
+        padding: 0;
     }
 
-
+    fieldset p {
+        margin:0;
+    }
 
 
     /*END*/
@@ -251,7 +260,6 @@
     }
 
     #accordion h3 {
-   /*     font-weight: bold;*/
         text-align: center;
         color: #1a0000;
         border: outset 5px #e67300;
@@ -268,6 +276,7 @@
         font-weight: bold;
         font-style: oblique;
         color: #b30000;
+        font-size: 130%;
     }
 
     #accordion .accordionSection {
@@ -319,7 +328,6 @@
         margin: 20px;
         padding: 0;
         border-radius: 50px;
-        /*background-color: rgba(255,230, 153, 1)*/
         background-color: white;
 
     }
@@ -334,7 +342,7 @@
         margin-bottom: 50px;
     }
 
-    .outputControls input {
+    .outputControls input, .outputControls select {
         padding: 5px;
         margin: 10px;
         background-color: #ffe699;
@@ -413,4 +421,44 @@
     /*END*/
 }
 
+
+table {
+    width: 80%;
+    background-color: #ffe699;
+    color: #1a0000;
+    border: solid 5px #660000;
+    border-radius: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2% 2% 5% 2%;
+}
+
+th {
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    background-color: #ff8000;
+    border: outset 5px red;
+    border-radius: 20px;
+    padding: 15px 0 15px 0;
+}
+
+tr {
+    text-align: right;
+}
+
+td {
+    padding-top: 10px;
+}
+
+.tableEnhance {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+
+select {
+    width: 300px;
+
+}
 /*END OF FILE*/

@@ -1,8 +1,5 @@
 <?php
 
-//making connection to the database
-//$connectionDB = new mysqli('LOCALHOST', '40270305','q4BjVJBP','40270305');
-
 //sql query for selecting given student from Database
 $StudentSelectQuery = "SELECT SPR_FNM1, SPR_SURN FROM INS_SPR WHERE SPR_CODE=?";
 
@@ -65,16 +62,6 @@ $SelectModulesQuery = "
      JOIN INS_MOD ON (CAM_SMO.MOD_CODE=INS_MOD.MOD_CODE)
      WHERE SPR_CODE=? AND AYR_CODE='2016/7' AND PSL_CODE='TR1';
 ";
-
-    //module details with staff details
-//  OPTIONALLY USE LATER WHEN ADDING MODULE'S DETAILS AND STAFF PICTURES
-    /*$SelectModulesQueryWithStaff = "
-         SELECT CAM_SMO.MOD_CODE, MOD_NAME, PRS_FNM1, PRS_SURN
-         FROM CAM_SMO
-            JOIN INS_MOD ON (CAM_SMO.MOD_CODE=INS_MOD.MOD_CODE)
-            LEFT JOIN INS_PRS ON (INS_MOD.PRS_CODE=INS_PRS.PRS_CODE)
-         WHERE SPR_CODE='50200036' AND AYR_CODE='2016/7' AND PSL_CODE='TR1';
-";*/
 
     //preparing and executing statement for module details
     $statementSelectModule = $connectionDB->prepare($SelectModulesQuery)

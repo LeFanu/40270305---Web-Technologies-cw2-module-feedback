@@ -75,7 +75,6 @@ foreach ($_REQUEST as $key=>$value) {
     $statement->execute()
         or die();
     if ($statement->error) {
-        //printf("Error: %s.\n", $statement->error);
         print   "<p>We are very sorry, but we could not store your results at the moment.
                     We advise to contact the administrator of this page.
                 <br>

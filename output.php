@@ -12,12 +12,15 @@ $connectionDB = new mysqli('localhost', '40270305','q4BjVJBP','40270305');
         die('connection failure');
     }
 
-//SQL query to obtain  percent value of answers for each
+//SQL query to obtain  percent value of answers for each chart
 $queryResultsOfAllModules = "
-    SELECT QUE_CODE, 100*AVG(CASE WHEN RES_VALU IN (4,5) THEN 1 ELSE 0 END)  AS results
-        FROM INS_RES 
+    SELECT  INS_RES.QUE_CODE, 
+    100*AVG(CASE WHEN RES_VALU IN (4,5) THEN 1 ELSE 0 END)  AS results,
+    COUNT(RES_VALU), INS_RES.MOD_CODE, INS_QUE.QUE_TEXT
+        FROM INS_RES
+        JOIN INS_QUE ON(INS_QUE.QUE_CODE=INS_RES.QUE_CODE)
         WHERE MOD_CODE=?
-        GROUP BY QUE_CODE ORDER BY QUE_CODE;
+        GROUP BY INS_RES.MOD_CODE, QUE_CODE,INS_QUE.QUE_TEXT ORDER BY QUE_CODE;
 ";
 
     //preparing and executing query

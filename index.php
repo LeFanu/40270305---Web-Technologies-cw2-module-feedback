@@ -10,8 +10,6 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!--Additional fonts from Google page for better looking design-->
-    <!--<link href="https://fonts.googleapis.com/css?family=Alegreya|Archivo+Black|Crete+Round|Oxygen|Playfair+Display+SC|Righteous" rel="stylesheet">
--->
     <link href="https://fonts.googleapis.com/css?family=Alegreya%7CArchivo+Black%7CCrete+Round%7COxygen%7CPlayfair+Display+SC%7CRighteous" rel="stylesheet">
 
     <!--links to the css, javascript, etc-->
@@ -35,7 +33,7 @@ print "<div id='wrapper'>";
 
     //top of the page
     print "<h1>Dominion University <br> Module Feedback</h1>";
-        //checking if user existis by getting matriculation number
+        //checking if user exists by getting matriculation number
         if(!array_key_exists( 'u', $_REQUEST)){
             print "<div class=\"outputControls\">";
             print "<p>Please enter your matriculation number below.</p>";
@@ -153,7 +151,6 @@ print "<div id='wrapper'>";
 
                                     //assigning proper id to each div
                                 print "<fieldset id='$rowSelectModule[0]$divname'>";
-//                                print "<legend><p class='questionTitle'>Question ".$rowQuestions[0].":</p>";
                                 print "<legend class='questionTitle'>Question ".$rowQuestions[0].":</legend>";
                                 print "<p>".$rowQuestions[1]."</p>";
 
@@ -187,7 +184,6 @@ print "<div id='wrapper'>";
                                             $check
                                             class=\"rating\" />";
 
-                                        //name=\"$key\" for IMG
                                             print "<img 
                                                     $imgSrc 
                                                     class=\"rating icon$key $checked\" 
