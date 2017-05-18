@@ -5,3 +5,4 @@ Students are being asked questions regarding the modules they take for each seme
 The same questions are asked for each module. 
 All feedback is in a scale of satisfaction or agreement with the statement given. 
 Written mainly in PHP. Main goal was to learn how to use databases on websites and make them interact.
+This was the simple exercise made for school purposes only. Therefore there is no intention of improving it. Now it serves as a portfolio.
